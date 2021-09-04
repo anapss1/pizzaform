@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Hello Pizza!</title>
+    <meta name="viewport">
+
+</head>
+
+<body>
+
+    <h1>Crie sua conta Hello Pizza!</h1>
+    
+    <form action="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+
+    <fieldset>
+        <legend>Conta:</legend>
+            <div>
+            <!-- Label Informa o nome que nós queremos dar ao input -->
+            <label>Email:</label>
+            <!-- INPUT Caixa que informa diferentes dados -->
+            <input type="email" name="email" required minlength="10" maxlength="100"/>
+            </div>
+        
+            <div>
+            <label>Senha:</label>
+            <input type="password" name="senha" required/>
+            <!-- Type é o tipo de informação que será atribuída ao input-->
+            </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados Pessoais:</legend>
+        <div>
+            <label>Nome:</label>
+            <input type="text" placeholder="Ex: Ana" name="nome" required/>
+        </div>
+    
+        <div>
+            <label>Telefone:</label>
+            <input type="text" placeholder="Ex: (92) 99999-9999" pattern="\([0-9]\)[\s][0-9]-[0-9]" name="numero" />
+        </div>
+    
+        <!--Atributo name para atribuir ao mesmo grupo-->
+        <!--Atributo checked para definir valor padrão ao iniciar-->
+        <div>
+            <label>Sexo:</label>
+            <input type="radio" value="Masculino" name="Sexo" checked/>
+            <label>Masculino</label>
+            <input type="radio" value="Feminino" name="Sexo"/>
+            <label>Feminino</label>
+            <input type="radio" value="Outro" name="Sexo"/>
+            <label>Outro</label>
+        </div>
+    
+        <div>
+            <label>Data:</label>
+            <input type="date" name="data" required/>
+        </div>
+    
+        <div>
+            <label>Foto de perfil:</label>
+            <input type="file" accept="image/*" name="foto de perfil"/>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Endereço:</legend>
+        <div>
+            <label>Rua:</label>
+            <input type="text" name="rua"/>
+        </div>
+    
+        <div>
+            <label>Complemento:</label>
+            <input type="text" name="complemento"/>
+        </div>
+    
+        <div>
+            <label>Numero:</label>
+            <input type="number" min="1" max="9999" name="numero"/>
+        </div>
+    
+        <div>
+            <label>Cidade:</label>
+            <input type="text" name="cidade" required/>
+        </div>
+    
+        <div>
+            <label>Estado:</label>
+            <select name="endereco_de_estado">
+                <option value="Amazonas">Amazonas</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+            </select>
+        </div>
+    </fieldset>
+
+   <fieldset>
+       <legend>Anúncio:</legend>
+        <!-- maxlength define o tamanho de caract-->
+    <div>
+        <label>Como conheceu o Hello Pizza?</label>
+        <textarea maxlength="243" placeholder="Explique para a gente como conheceu o Hello Pizza" name="como_conheceu_o_site"></textarea>
+    </div>
+
+    <div>
+        <label>Desejo receber ofertas por e-mail</label>
+        <input type="checkbox" name="receber_anuncio" checked>
+    </div>
+   </fieldset>
+
+   <input type="submit" value="Enviar" name="enviar"/>
+
+    </form>
+
+</body>
+
+</html>
